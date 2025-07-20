@@ -15,7 +15,7 @@ from django.http import HttpResponse
 def projects(request):
     # This is a function for the projects view.
     # You would typically return a rendered template or a response here.
-    return HttpResponse("Here are our projects.")
+    return render(request, 'projects.html')
 
 def project(request, pk):
-    return HttpResponse(f"Here is a specific project: {str(pk)}")
+    return render(request, 'single-project.html')
